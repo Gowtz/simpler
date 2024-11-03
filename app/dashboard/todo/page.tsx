@@ -35,7 +35,7 @@ export default function Page() {
             className=" flex justify-between items-center py-3 px-5 m-2"
           >
               {!ele.completed?
-            <span>{ele.id}</span>:
+            <span>{ele.content}</span>:
                 <span><del>{ele.content}</del></span>
               }
             <Checkbox checked={ele.completed} onCheckedChange={()=>updateTodo(ele.id)} />
