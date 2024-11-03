@@ -11,3 +11,11 @@ export const formatTime = (time: number) => {
   const seconds = time % 60;
   return `${hour.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 };
+
+export const generateRandomId = () =>{
+    return self.crypto.randomUUID()
+}
+
+export function formatDate(data:number) {
+  return new Intl.DateTimeFormat("en", { dateStyle: "long" }).format(data);
+}
